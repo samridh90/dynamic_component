@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
     <dl>
         <dt>{{ propertyeName }}</dt>
         <dd>
-            <input type="text" [(ngModel)]="entity[propertyeName]" />
+            <input type="text" [(ngModel)]="entity[propertyName]" />
         </dd>
     </dl>
     `

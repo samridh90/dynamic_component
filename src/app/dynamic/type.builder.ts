@@ -2,6 +2,7 @@ import { Component, ComponentFactory, NgModule, Input, Injectable } from '@angul
 import { RuntimeCompiler } from '@angular/compiler';
 
 import { PartsModule } from '../parts/parts.module';
+import * as _ from 'lodash';
 
 export interface DynamicData {
     entity: any;
@@ -30,7 +31,9 @@ export class DynamicTypeBuilder {
             this.compiler
                 .compileModuleAndAllComponentsAsync(module)
                 .then((moduleWithFactories) => {
-                    
+                    factory = _.find(moduleWithFactories.componentFactories, {componentType: type});
+                    this.factoryCache[template] = factory;
+                    resolve(factory);
                 });
         });
     }

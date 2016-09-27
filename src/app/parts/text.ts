@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/Rx';
     <dl>
         <dt>{{ propertyeName }}</dt>
         <dd>
-            <textarea cols="15" rows="5" [(ngModel)]="entity[propertyeName]"></textarea>
+            <textarea cols="15" rows="5" [(ngModel)]="entity[propertyName]"></textarea>
         </dd>
     </dl>
     `

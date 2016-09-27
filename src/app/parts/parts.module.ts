@@ -24,11 +24,4 @@ export const DYNAMIC_DIRECTIVES = [
         FormsModule
     ]
 })
-export class PartsModule {
-    static forRoot() {
-        return {
-            ngModule: PartsModule,
-            providers: []
-        }
-    }
-}
+export class PartsModule {}
